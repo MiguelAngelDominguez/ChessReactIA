@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Header />
     <Body />
-    <Footer />
+    {/* <Footer /> */}
   </React.StrictMode>,
 )
 registerServiceWorker();

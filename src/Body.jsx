@@ -20,7 +20,7 @@ export const Body = () => {
                 </div>
 
             </div>
-            <Tools />
+            {/* <Tools /> */}
         </div>
     )
 }
