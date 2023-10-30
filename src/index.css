@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+#root{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.logoText, .titleMain{
+    font-size: 1.8em;
+    font-weight: 600;
+}
