@@ -1,0 +1,34 @@
+.Presentation{
+    position: static;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.Demostration{
+    color: #fff;
+    margin: 7em;
+    padding: 0em 2em 0em 0em ;
+    border-radius: 1em;
+
+    background-color: rgba(40,40,42,255);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .ChessboardBody{
+        transform: rotate(8deg);
+        position: relative;
+        left: -2em;
+    }
+    .logoBig{
+        display: inherit;
+        align-items: inherit;
+        .LogoImg{
+            width: 7em;
+            height: 7em;
+        }
+        .titleMain{
+            font-size: 6em;
+        }
+
+    }
+}
