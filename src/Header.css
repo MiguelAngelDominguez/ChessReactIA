@@ -1,0 +1,34 @@
+.headerMain {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    padding: 0.7em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: inherit;
+    .logo{
+        display: inline-flex;
+        align-items: center;
+        .logoImg{
+            width: 3.5em;
+            height: 3.5em;
+        }
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        .menuOpc{
+            color: inherit;
+            padding: 0.5em 0.9em;
+        }
+    }
+}
+
+#blurredHeader{
+    background-color: #17848ca1;
+    backdrop-filter: blur(3.5px);
+}
+
+ 
+
