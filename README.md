@@ -20,12 +20,12 @@ El objetivo principal de ChessReact es proporcionar a los entusiastas del ajedre
 Este proyecto está bajo la licencia [Licencia MIT](LICENSE).
 ___
 ## Sobre mi
-![https://github.com/pana-miguel](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
-![https://www.linkedin.com/in/miguel-angel-dominguez-valentin-757292263/](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=whitek)
+[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pana-miguel)
+[![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=whitek)](https://www.linkedin.com/in/miguel-angel-dominguez-valentin-757292263/)
 
-![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=pana-miguel&theme=github_dark)
+[![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=pana-miguel&theme=github_dark)](https://github.com/pana-miguel)
 
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=pana-miguel&theme=github_dark)
+[![](https://github-readme-stats.vercel.app/api/top-langs/?username=pana-miguel&theme=github_dark)](https://github.com/pana-miguel)
 
 
 
