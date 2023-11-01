@@ -8,10 +8,10 @@ export const Presentation = () => {
                 <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
                     <div class="sm:max-w-lg">
                         <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                            La Mejor Pagina de Chess React Impulsado por IA
+                            ChessReact
                         </h1>
                         <p class="mt-4 text-xl text-gray-500">
-                        Descubre la mejor plataforma de ajedrez en línea impulsada por inteligencia artificial. Juega partidas emocionantes y mejora tus habilidades con Chess React.
+                            Descubre la mejor plataforma de ajedrez en línea impulsada por inteligencia artificial. Juega partidas emocionantes y mejora tus habilidades con Chess React.
                         </p>
                     </div>
                     <div>
