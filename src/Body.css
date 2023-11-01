@@ -1,34 +1,67 @@
 .Presentation{
     position: static;
     font-family: 'Josefin Sans', sans-serif;
+    margin-block-end: 10em;
 }
 
 
-.Demostration{
+.CarrucelInfo{
     color: #fff;
     margin: 7em;
-    padding: 0em 2em 0em 0em ;
+    padding: 2em 0em 2em 0em;
     border-radius: 1em;
 
     background-color: rgba(40,40,42,255);
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     .ChessboardBody{
         transform: rotate(8deg);
-        position: relative;
-        left: -2em;
+        position: sticky;
+        z-index: 1;
     }
-    .logoBig{
-        display: inherit;
-        align-items: inherit;
-        .LogoImg{
-            width: 7em;
-            height: 7em;
+    .Informacion{
+        z-index: 2;
+        .Frase_Img{
+            display: flex;
+            align-items: center;
+            .LogoImg{
+                width: 7em;
+                height: 7em;
+            }
+            .titleMain{
+                background-color: #22222267;
+                padding: 0.5em;
+                border-radius: 0.4em;
+                max-width: 11em;
+                font-size: 3.2em;
+                font-weight: 500;
+            }
         }
-        .titleMain{
-            font-size: 6em;
+        .GroupItem{
+            .Item{
+                max-width: 35em;
+                padding: 1.3em;
+                border-radius: 1em;
+                .ItemTitle{
+                    font-size: 1.1em;
+                    font-weight: 500;
+                    padding-block: 0.4em;
+                }
+                .ItemText{
+                    padding-inline: 0.5em;
+                    line-height: 1.5;
+                    color: #a1a1aa;
+                }
+            }
+            .Item:hover{
+                background-color: #222222;
+                transition: 0.3s all;
+            }
+            .Item:not(hover){
+                background-color: transparent;
+                transition: 0.5s all;
+            }
         }
-
     }
 }
