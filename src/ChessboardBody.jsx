@@ -56,7 +56,7 @@ export const ChessboardBody = () => {
             // Esta linea de codigo coloca piezas de muestra 
             // fuera del tablero
             // sparePieces={true}
-            width={550}
+            width={500}
             id="random"
             position={position}
             transitionDuration={300}
