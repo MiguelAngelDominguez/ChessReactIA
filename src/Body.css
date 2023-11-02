@@ -1,67 +1,111 @@
-.Presentation{
-    position: static;
+.Presentation {
+    position: static !important;
     font-family: 'Josefin Sans', sans-serif;
-    margin-block-end: 10em;
+    margin-block-end: 14rem;
 }
 
 
-.CarrucelInfo{
+.CarruselInfo {
     color: #fff;
     margin: 7em;
-    padding: 2em 0em 2em 0em;
+    padding: 1.5em;
     border-radius: 1em;
+    background-color: rgba(40, 40, 42, 255);
 
-    background-color: rgba(40,40,42,255);
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-gap: 0.4em;
+    grid-template-areas:"ChessboardRandom Frase_Img"
+                        "ChessboardRandom Item1"
+                        "ChessboardRandom Item2"
+                        "ChessboardRandom Item3"
+                        "carruselBoardChess carruselBoardChess";
     align-items: center;
-    justify-content: space-around;
-    .ChessboardBody{
-        transform: rotate(8deg);
+    justify-items: center;
+    justify-content: center;
+    .ChessboardRandom {
         position: sticky;
-        z-index: 1;
+        grid-area: ChessboardRandom;
     }
-    .Informacion{
-        z-index: 2;
-        .Frase_Img{
-            display: flex;
-            align-items: center;
-            .LogoImg{
-                width: 7em;
-                height: 7em;
-            }
-            .titleMain{
-                background-color: #22222267;
-                padding: 0.5em;
-                border-radius: 0.4em;
-                max-width: 11em;
-                font-size: 3.2em;
-                font-weight: 500;
-            }
+    .Frase_Img {
+        display: flex;
+        align-items: center;
+        margin-block: 0.7em;
+        grid-area: Frase_Img;
+        .LogoImg {
+            width: 7em;
+            height: 7em;
         }
-        .GroupItem{
-            .Item{
-                max-width: 35em;
-                padding: 1.3em;
-                border-radius: 1em;
-                .ItemTitle{
-                    font-size: 1.1em;
-                    font-weight: 500;
-                    padding-block: 0.4em;
-                }
-                .ItemText{
-                    padding-inline: 0.5em;
-                    line-height: 1.5;
-                    color: #a1a1aa;
-                }
-            }
-            .Item:hover{
-                background-color: #222222;
-                transition: 0.3s all;
-            }
-            .Item:not(hover){
-                background-color: transparent;
-                transition: 0.5s all;
-            }
+
+        .titleMain {
+            background-color: #22222267;
+            padding: 0.5em;
+            border-radius: 0.4em;
+            max-width: 11em;
+            font-size: 3.2em;
+            font-weight: 500;
         }
+    }
+    .Item {
+        max-width: 35em;
+        padding: 1.3em;
+        border-radius: 1em;
+        margin-block: 0.2em;
+        .ItemTitle {
+            font-size: 1.1em;
+            font-weight: 500;
+            padding-block: 0.4em;
+        }
+
+        .ItemText {
+            padding-inline: 0.5em;
+            line-height: 1.5;
+            color: #a1a1aa;
+        }
+    }
+
+    .Item:hover {
+        background-color: #222222;
+        transition: 0.3s all;
+    }
+
+    .Item:not(hover) {
+        background-color: transparent;
+        transition: 0.5s all;
+    }
+    .Item1{
+        grid-area: Item1;
+    }
+    .Item2{
+        grid-area: Item2;
+    }
+    .Item3{
+        grid-area: Item3;
+    }
+    .carruselBoardChess{
+        display: grid;
+        grid-template-columns: repeat(5,auto);
+        grid-gap: 2em;
+        grid-area: carruselBoardChess;
+        margin-block: 2em;
+        .board{
+            margin: 1em;
+        }
+        #board1{
+            transform: rotate(5deg);
+        }
+        #board2{
+            transform: rotate(-3deg);
+        }
+        #board3{
+            transform: rotate(3deg);
+        }
+        #board4{
+            transform: rotate(-2.5deg);
+        }
+        #board5{
+            transform: rotate(4deg);
+        }
+
     }
 }
