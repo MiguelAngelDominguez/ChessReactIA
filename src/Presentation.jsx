@@ -1,5 +1,10 @@
 import React from 'react'
 import './Presentation.css'
+import ficha1 from "./assets/img/ficha1.jpeg"
+import ficha2 from "./assets/img/ficha2.jpeg"
+import ficha3 from "./assets/img/ficha3.jpeg"
+import ficha4 from "./assets/img/ficha4.jpeg"
+import imgLogo from "./assets/img/imgLogo.jpeg"
 
 export const Presentation = () => {
     return (
@@ -21,29 +26,29 @@ export const Presentation = () => {
                                     <div class="flex items-center space-x-6 lg:space-x-8">
                                         <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                                             <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                                                <img src="/src/assets/img/ficha1.jpeg" alt="" class="h-full w-full object-cover object-center" />
+                                                <img src={ficha1} alt="" class="h-full w-full object-cover object-center" />
                                             </div>
                                             <div class="h-64 w-44 overflow-hidden rounded-lg">
-                                                <img src="/src/assets/img/ficha2.jpeg" alt="" class="h-full w-full object-cover object-center" />
-                                            </div>
-                                        </div>
-                                        <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                                            <div class="h-64 w-44 overflow-hidden rounded-lg">
-                                                <img src="/src/assets/img/ficha4.jpeg" alt="" class="h-full w-full object-cover object-center" />
-                                            </div>
-                                            <div class="h-64 w-44 overflow-hidden rounded-lg">
-                                                <img src="/src/assets/img/ficha3.jpeg" alt="" class="h-full w-full object-cover object-center" />
-                                            </div>
-                                            <div class="h-64 w-44 overflow-hidden rounded-lg">
-                                                <img src="/src/assets/img/imgLogo.jpeg" alt="" class="h-full w-full object-cover object-center" />
+                                                <img src={ficha2} alt="" class="h-full w-full object-cover object-center" />
                                             </div>
                                         </div>
                                         <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                                             <div class="h-64 w-44 overflow-hidden rounded-lg">
-                                                <img src="/src/assets/img/ficha2.jpeg" alt="" class="h-full w-full object-cover object-center" />
+                                                <img src={ficha4} alt="" class="h-full w-full object-cover object-center" />
+                                            </div>
+                                            <div class="h-64 w-44 overflow-hidden rounded-lg">
+                                                <img src={ficha3} alt="" class="h-full w-full object-cover object-center" />
+                                            </div>
+                                            <div class="h-64 w-44 overflow-hidden rounded-lg">
+                                                <img src={imgLogo} alt="" class="h-full w-full object-cover object-center" />
+                                            </div>
+                                        </div>
+                                        <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                                            <div class="h-64 w-44 overflow-hidden rounded-lg">
+                                                <img src={ficha2} alt="" class="h-full w-full object-cover object-center" />
                                             </div>
                                             <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                                                <img src="/src/assets/img/ficha1.jpeg" alt="" class="h-full w-full object-cover object-center" />
+                                                <img src={ficha1} alt="" class="h-full w-full object-cover object-center" />
                                             </div>
                                         </div>
                                     </div>
