@@ -7,13 +7,14 @@
 
 .CarruselInfo {
     color: #fff;
-    margin: 7em;
-    padding: 1.5em;
-    border-radius: 1em;
+    /* margin: 7em; */
+    padding-inline: 1.5em;
+    padding-block: 2em;
+    /* border-radius: 1em; */
     background-color: rgba(40, 40, 42, 255);
 
     display: grid;
-    grid-template-columns: repeat(2,auto);
+    grid-template-columns: repeat(2,1fr);
     grid-gap: 0.4em;
     grid-template-areas:"ChessboardRandom Frase_Img"
                         "ChessboardRandom Item1"
@@ -83,11 +84,16 @@
         grid-area: Item3;
     }
     .carruselBoardChess{
+        grid-area: carruselBoardChess;
+        padding: 1.4em;
+    }
+    .carruselBoardChess_{
         display: grid;
         grid-template-columns: repeat(5,auto);
         grid-gap: 2em;
-        grid-area: carruselBoardChess;
         margin-block: 2em;
+        position: relative;
+        overflow: hidden;
         .board{
             margin: 1em;
         }
@@ -106,6 +112,41 @@
         #board5{
             transform: rotate(4deg);
         }
-
+        .board:first-child,
+        .board:last-child{
+            /* display: none; */
+            overflow: hidden;
+            /* position: absolute; */
+        }
     }
+}
+
+.CardsBenefits{
+    margin-inline: 17em;
+    margin-block: 3em;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+    grid-template-areas:"information information information"
+                        "benefits1 benefits2 benefits3";
+    
+}
+
+.information{
+    grid-area: information;
+    text-align: center;
+    margin-block: 2em;
+    h1{
+        color: #a1a1aa;
+    }
+}
+
+.carruselBoardChess{
+    background-color: #222222;
+    padding: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
