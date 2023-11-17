@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Chess } from "chess.js"
+import { Chess } from "chess.js";
 import Chessboard from "chessboardjsx";
+// import minimaxAlfaBeta from "./IA Chess/minimax-alfabeta";
 
 
 const chess = new Chess()
@@ -31,3 +32,4 @@ export const ChessboardBody = ({w,position,roughSquare,id}) => {
     
   )
 }
+
