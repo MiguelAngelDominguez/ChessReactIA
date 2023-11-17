@@ -3,7 +3,7 @@ import { Presentation } from "./Presentation"
 import { ChessboardRandom } from './ChessboardRandom.jsx'
 import { CarruselChess } from "./CarruselChess"
 import { CardInformation } from "./CardInformation"
-import { ChessboarPLay } from "./ChessboarPlay"
+import { ChessboardPlay } from "./ChessboardPlay"
 import registerServiceWorker from "./registerServiceWorker";
 import { Tools } from './Tools.jsx'
 import { roughSquare } from "./customRough"
@@ -82,7 +82,7 @@ export const Body = () => {
                 }
                 <CarruselChess />
             </div>
-            <ChessboarPLay />
+            <ChessboardPlay />
             {/* registerServiceWorker() */}
             {/* <Tools /> */}
         </div >
