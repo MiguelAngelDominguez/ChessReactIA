@@ -27,8 +27,8 @@ class RandomVsRandom extends Component {
 
     // exit if the game is over
     if (
-      this.game.isGameOver() === true ||
-      this.game.isDraw() === true ||
+      this.game.game_over() === true ||
+      this.game.in_draw() === true ||
       possibleMoves.length === 0
     )
       return;
