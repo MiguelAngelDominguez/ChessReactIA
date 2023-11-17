@@ -83,7 +83,7 @@ export const Body = () => {
                 <CarruselChess />
             </div>
             <ChessboarPLay />
-            registerServiceWorker()
+            {/* registerServiceWorker() */}
             {/* <Tools /> */}
         </div >
     )

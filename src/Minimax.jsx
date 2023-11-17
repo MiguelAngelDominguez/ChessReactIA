@@ -1,9 +1,8 @@
 import { useState } from "react";
-import React, { Component } from "react";
-import Chessboard from "chessboardjsx";
 import { Chess } from "chess.js";
 
-export const Minimax = () => {
+
+export default Minimax = () => {
 
     // Initialize the chess game
     const game = new Chess();
@@ -104,35 +103,4 @@ export const Minimax = () => {
     // Initialize the board state
     const [fen, setFen] = useState(game.fen());
     
-}
-
-export const ChessboarPLay = () => {
-    const boardsContainer = {
-        display: "flex",
-        justifyContent: "space-around",
-        alignItems: "center"
-    };
-    const boardStyle = {
-        borderRadius: "5px",
-        boxShadow: `0 5px 15px rgba(0, 0, 0, 0.5)`
-    };
-
-    return (
-        <div style={boardsContainer}>
-            <Minimax>
-                {({ position, onDrop }) => (
-                    <Chessboard
-                        id="minimax"
-                        position={position}
-                        width={320}
-                        onDrop={onDrop}
-                        boardStyle={boardStyle}
-                        orientation="black"
-                    />
-                )}
-            </Minimax>
-
-
-        </div >
-    )
 }
