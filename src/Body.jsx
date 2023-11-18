@@ -58,12 +58,30 @@ export const Body = () => {
                         Descubre la mejor plataforma de ajedrez en línea impulsada por inteligencia artificial. Juega partidas emocionantes y mejora tus habilidades con Chess React.
                     </p>
                 </div>
-                <CardInformation />
-                <CardInformation />
-                <CardInformation />
-                <CardInformation />
-                <CardInformation />
-                <CardInformation />
+                <CardInformation 
+                title={"Experiencia de aprendizaje mejorada"}
+                text={"Los usuarios pueden mejorar sus habilidades de ajedrez jugando contra una IA"}
+                />
+                <CardInformation 
+                title={"Comodidad y accesibilidad"}
+                text={"Los jugadores pueden disfrutar de una partida de ajedrez en cualquier momento y en cualquier lugar"}
+                />
+                <CardInformation 
+                title={"Entrenamiento personalizado"}
+                text={"La IA puede proporcionar comentarios y análisis personalizados de los movimientos del jugador"}
+                />
+                <CardInformation
+                title={"Construcción de la comunida"}
+                text={"El sitio web puede fomentar una comunidad de entusiastas del ajedrez, permitiendo a los jugadores conectarse, competir y aprender unos de otros"}
+                />
+                <CardInformation 
+                title={"Características innovadoras"}
+                text={"La integración de la IA puede permitir funciones únicas como el análisis del juego en tiempo real, el seguimiento de movimientos históricos y los niveles de dificultad "}
+                />
+                <CardInformation
+                title={"Investigación y desarrollo"}
+                text={"El sitio web puede servir como plataforma para la investigación y el desarrollo de la IA en el campo de los algoritmos de ajedrez"}
+                />
             </div>
             <div className="carruselBoardChess">
                 <div className="information sm:max-w-lg">
