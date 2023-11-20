@@ -8,6 +8,9 @@ const game = new Chess();
 export const Minimax = () => {
 
   const [fen, setFen] = useState("start");
+  const propTypes = { children: PropTypes.func };
+
+  const state = { fen: "start" };
 
   // Define the position function
   const position = () => {
@@ -23,15 +26,13 @@ export const Minimax = () => {
 
   // Define the onDrop function
   const onDrop = ({ sourceSquare, targetSquare }) => {
-
-
     if (game.turn() === "b") {
       console.log("It's black's turn");
       console.log(`Black player moved from ${sourceSquare} to ${targetSquare}`);
       const move = game.move({
         from: sourceSquare,
         to: targetSquare,
-        promotion: "q",
+        promotion: "k",
       });
 
       if (move === null) {
@@ -74,7 +75,6 @@ export const Minimax = () => {
 
   // Define the minimax-alfabeta algorithm
   const minimax = (game, depth, alpha, beta, maximizingPlayer) => {
-    console.log("se usa minimax")
     if (depth === 0 || game.game_over()) {
       return { move: null, value: evaluateBoard(game) };
     }
@@ -139,6 +139,7 @@ export const Minimax = () => {
     borderRadius: "5px",
     boxShadow: `0 5px 15px rgba(0, 0, 0, 0.5)`,
   };
+
   return (
     <Chessboard
       id="minimax"
@@ -151,4 +152,5 @@ export const Minimax = () => {
       orientation="black"
     />
   );
+  
 };
