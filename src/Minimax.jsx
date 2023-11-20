@@ -1,61 +1,80 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Chess } from "chess.js";
+import PropTypes from "prop-types";
 import Chessboard from "chessboardjsx";
+// Initialize the chess game
+const game = new Chess();
 
 export const Minimax = () => {
-  // Initialize the chess game
-  const game = new Chess();
+
+  const [fen, setFen] = useState("start");
 
   // Define the position function
   const position = () => {
     return game.fen();
   };
 
+  if (game.turn() === "w") {
+    const moves = game.moves();
+    const randomIndex = Math.floor(Math.random() * moves.length);
+    const randomMove = moves[randomIndex];
+    game.move(randomMove);
+  }
+
   // Define the onDrop function
   const onDrop = ({ sourceSquare, targetSquare }) => {
-    // Verificar si es el turno del algoritmo para mover
+
+
     if (game.turn() === "b") {
-      // Llamar al algoritmo minimax-alfabeta para hacer un movimiento
-      const bestMove = minimax(game, 3, -Infinity, Infinity, true).move;
-      game.move(bestMove);
-      setFen(game.fen());
-      console.log("Es el turno de las negras");
-      return;
-    }
-    if (game.turn() === "w") {
-      console.log("Es el turno de las blancas");
-      // Si es el turno del jugador, manejar el movimiento
+      console.log("It's black's turn");
+      console.log(`Black player moved from ${sourceSquare} to ${targetSquare}`);
       const move = game.move({
         from: sourceSquare,
         to: targetSquare,
         promotion: "q",
       });
-      // siempre promover a una reina por simplicidad del ejemplo
 
-      // Si hubo un error, imprimir de quién era el turno y devolver la ficha movida a su posición anterior
       if (move === null) {
-        console.log("Es el turno de las negras");
-        game.undo();
+        console.log("Invalid move by black player: ", move);
         return;
       }
 
-      // Si el movimiento es ilegal, retornar
-      if (move === null) return;
-
-      // Hacer el movimiento para el algoritmo minimax-alfabeta
       game.move(move);
+      setFen(game.fen());
+      console.log("It's black's turn");
 
-      // Llamar al algoritmo minimax-alfabeta para hacer un movimiento
+    }
+    if (game.turn() === "w") {
+      console.log("It's white's turn");
+      // Handle white player's move
+      const move = game.move({
+        from: sourceSquare,
+        to: targetSquare,
+        promotion: "q",
+      });
+
+      if (move === null) {
+        console.log("Invalid move by white player");
+        return;
+      }
+
+      game.move(move);
+      setFen(game.fen());
+      console.log("It's white's turn");
+      // Call the minimax algorithm for the white player here
       const bestMove = minimax(game, 3, -Infinity, Infinity, true).move;
       game.move(bestMove);
-
-      // Actualizar el tablero
       setFen(game.fen());
     }
+    return new Promise(resolve => {
+      this.setState({ fen: game.fen() });  // Actualiza el estado del tablero de ajedrez
+      resolve();
+    }).then(() => this.engineGame().prepareMove());
   };
 
   // Define the minimax-alfabeta algorithm
   const minimax = (game, depth, alpha, beta, maximizingPlayer) => {
+    console.log("se usa minimax")
     if (depth === 0 || game.game_over()) {
       return { move: null, value: evaluateBoard(game) };
     }
@@ -102,7 +121,7 @@ export const Minimax = () => {
   const evaluateBoard = (game) => {
     // Count the material
     let material = 0;
-    const board = game.board();
+    const board = game.board ? game.board() : [];
     for (let i = 0; i < board.length; i++) {
       for (let j = 0; j < board[i].length; j++) {
         const piece = board[i][j];
@@ -116,7 +135,6 @@ export const Minimax = () => {
   };
 
   // Initialize the board state
-  const [fen, setFen] = useState(game.fen());
   const boardStyle = {
     borderRadius: "5px",
     boxShadow: `0 5px 15px rgba(0, 0, 0, 0.5)`,
@@ -130,7 +148,7 @@ export const Minimax = () => {
         onDrop(sourceSquare, targetSquare)
       }
       boardStyle={boardStyle}
-      orientation="white"
+      orientation="black"
     />
   );
 };
