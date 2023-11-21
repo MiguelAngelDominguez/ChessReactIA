@@ -1,22 +1,23 @@
 import React, { Component } from "react";
-import { Chess } from "chess.js";
 import PropTypes from "prop-types";
+import Chessboard from "chessboardjsx";
+import { Chess } from "chess.js";
+
 
 const STOCKFISH = window.STOCKFISH;
 const game = new Chess();
 
-export const Stockfish = () => {
-  const propTypes = { children: PropTypes.func };
+class Stockfish extends Component {
+  static propTypes = { children: PropTypes.func };
 
-  const state = { fen: "start" };
+  state = { fen: "start" };
 
-  const componentDidMount= () => {
+  componentDidMount() {
     this.setState({ fen: game.fen() });  // Establece el estado inicial del tablero de ajedrez
-
     this.engineGame().prepareMove();  // Prepara el movimiento del motor de ajedrez
   }
 
-  const onDrop = ({ sourceSquare, targetSquare }) => {
+  onDrop = ({ sourceSquare, targetSquare }) => {
     const move = game.move({
       from: sourceSquare,
       to: targetSquare,
@@ -31,17 +32,17 @@ export const Stockfish = () => {
     }).then(() => this.engineGame().prepareMove());  // Prepara el siguiente movimiento del motor de ajedrez
   };
 
-  const engineGame = options => {
+  engineGame = options => {
     options = options || {};
 
     let engine =
       typeof STOCKFISH === "function"
         ? STOCKFISH()
-        : new Worker(options.stockfishjs || "stockfish.js");  // Inicializa el motor de ajedrez
+        : new Worker(options.stockfishjs || "src/integrations/Stockfish.js");  // Inicializa el motor de ajedrez
     let evaler =
       typeof STOCKFISH === "function"
         ? STOCKFISH()
-        : new Worker(options.stockfishjs || "stockfish.js");  // Inicializa el evaluador del motor de ajedrez
+        : new Worker(options.stockfishjs || "src/integrations/Stockfish.js");  // Inicializa el evaluador del motor de ajedrez
     let engineStatus = {};  // Estado del motor de ajedrez
     let time = { wtime: 3000, btime: 3000, winc: 1500, binc: 1500 };  // Tiempo de juego
     let playerColor = "black";  // Color del jugador
@@ -240,11 +241,30 @@ export const Stockfish = () => {
     };
   };
 
-  // render= () => {
-  //   const { fen } = this.state;
-  //   return this.props.children({ position: fen, onDrop: this.onDrop });  // Devuelve los elementos hijos con la posición actual y la función de realizar un movimiento
-  // }
-  // return (
-  //   <div>Stockfish</div>
-  // )
+  render() {
+    const { fen } = this.state;
+    return this.props.children({ position: fen, onDrop: this.onDrop });  // Devuelve los elementos hijos con la posición actual y la función de realizar un movimiento
+  }
 }
+
+export const StockfishChess = () => {
+  return (
+    <Stockfish>
+      {({ position, onDrop }) => (
+        <Chessboard
+          id="stockfish"
+          position={position}
+          width={320}
+          onDrop={onDrop}
+          boardStyle={boardStyle}
+          orientation="black"
+        />
+      )}
+    </Stockfish>
+  )
+};
+
+const boardStyle = {
+  borderRadius: "5px",
+  boxShadow: `0 5px 15px rgba(0, 0, 0, 0.5)`
+};

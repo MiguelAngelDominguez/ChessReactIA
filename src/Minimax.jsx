@@ -37,6 +37,9 @@ export const Minimax = () => {
 
       if (move === null) {
         console.log("Invalid move by black player: ", move);
+        const bestMove = minimax(game, 3, -Infinity, Infinity, true).move;
+        game.move(bestMove);
+        setFen(game.fen());
         return;
       }
 
@@ -152,5 +155,4 @@ export const Minimax = () => {
       orientation="black"
     />
   );
-  
 };
