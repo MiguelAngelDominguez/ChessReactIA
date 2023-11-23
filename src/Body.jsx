@@ -4,7 +4,6 @@ import { ChessboardRandom } from './ChessboardRandom.jsx'
 import { CarruselChess } from "./CarruselChess"
 import { CardInformation } from "./CardInformation"
 import { ChessboardPlay } from "./ChessboardPlay"
-import registerServiceWorker from "./registerServiceWorker";
 import { Tools } from './Tools.jsx'
 import { roughSquare } from "./customRough"
 import './Body.css';
@@ -106,7 +105,6 @@ export const Body = () => {
                 }
                 <CarruselChess />
             </div>
-            {/* registerServiceWorker() */}
             {/* <Tools /> */}
         </div >
     )

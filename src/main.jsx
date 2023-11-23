@@ -6,9 +6,6 @@ import './reset.css'
 import './normalize.css'
 import './index.css'
 
-
-import registerServiceWorker from "./registerServiceWorker";
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter basename="">
@@ -22,4 +19,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     /* <Footer /> */}
   </React.StrictMode>,
 )
-registerServiceWorker();
