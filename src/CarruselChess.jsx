@@ -5,7 +5,7 @@ import './CarruselChess.css';
 export const CarruselChess = () => {
     const widthTable = 400;
     return (
-        <div>
+        <div className='CarruselChess'>
             <figure class="tarjetas">
                 <div class="tarjetas__contenido">
                     <div class="tarjetas__elemento">
@@ -19,6 +19,9 @@ export const CarruselChess = () => {
                     </div>
                 </div>
             </figure>
+            <a href="/play" class="Button inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700">
+                Juega Ahora
+            </a>
         </div>
     )
 }
