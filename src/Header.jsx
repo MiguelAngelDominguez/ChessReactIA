@@ -13,14 +13,17 @@ export const Header = () => {
             </span>
 
             <div className='menu'>
-                <a href="" className='menuOpc'>
-                    Juega
+                <a href="/#home" className='menuOpc'>
+                    Inicio
                 </a>
-                <a href="" className='menuOpc'>
-                    Como Funciona
-                </a>
-                <a href="" className='menuOpc'>
+                <a href="/#about" className='menuOpc'>
                     ¿Quienes Somos?
+                </a>
+                <a href="/#benef" className='menuOpc'>
+                    Beneficios
+                </a>
+                <a href="/#play" className='menuOpc'>
+                    Juega Ahora
                 </a>
             </div>
         </div>
