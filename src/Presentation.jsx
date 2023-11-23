@@ -8,7 +8,7 @@ import imgLogo from "./assets/img/imgLogo.jpeg"
 
 export const Presentation = () => {
     return (
-        <div class="Presentation relative overflow-hidden bg-white">
+        <div id='home' class="Presentation relative overflow-hidden bg-white">
             <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
                 <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
                     <div class="sm:max-w-lg">
@@ -54,8 +54,8 @@ export const Presentation = () => {
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" class="Button inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700">
-                                Muy Pronto
+                            <a href="/play" class="Button inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700">
+                                Juega Ahora
                             </a>
                         </div>
                     </div>
