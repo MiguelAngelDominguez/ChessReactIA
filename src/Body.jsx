@@ -14,7 +14,7 @@ export const Body = () => {
     return (
         <div className="Body" >
             <Presentation />
-            <div className="CarruselInfo">
+            <div id="about" className="CarruselInfo">
                 <div style={boardsContainer} className="ChessboardRandom">
                     <ChessboardRandom />
                 </div>
@@ -49,47 +49,53 @@ export const Body = () => {
                     </p>
                 </div>
             </div>
-            <div className="CardsBenefits">
+            <div id="benef" className="CardsBenefits">
                 <div className="information sm:max-w-lg">
                     <h1 className="text-4xl tracking-tight text-gray-900 sm:text-6xl">
                         Conoce los beneficios de usar ChessReact
                     </h1>
                     <p className="mt-4 text-xl text-gray-500">
-                        Descubre la mejor plataforma de ajedrez en línea impulsada por inteligencia artificial. Juega partidas emocionantes y mejora tus habilidades con Chess React.
+                    Explora y potencia tu juego de ajedrez con ChessReact, descubriendo beneficios que mejorarán tus habilidades estratégicas y tácticas rápidamente.
                     </p>
                 </div>
                 <CardInformation 
                 title={"Experiencia de aprendizaje mejorada"}
                 text={"Los usuarios pueden mejorar sus habilidades de ajedrez jugando contra una IA"}
+                icon={"gg-bot"}
                 />
                 <CardInformation 
                 title={"Comodidad y accesibilidad"}
                 text={"Los jugadores pueden disfrutar de una partida de ajedrez en cualquier momento y en cualquier lugar"}
+                icon={"gg-laptop"}
                 />
                 <CardInformation 
                 title={"Entrenamiento personalizado"}
                 text={"La IA puede proporcionar comentarios y análisis personalizados de los movimientos del jugador"}
+                icon={"gg-list-tree"}
                 />
                 <CardInformation
                 title={"Construcción de la comunida"}
                 text={"El sitio web puede fomentar una comunidad de entusiastas del ajedrez, permitiendo a los jugadores conectarse, competir y aprender unos de otros"}
+                icon={"gg-globe-alt"}
                 />
                 <CardInformation 
                 title={"Características innovadoras"}
                 text={"La integración de la IA puede permitir funciones únicas como el análisis del juego en tiempo real, el seguimiento de movimientos históricos y los niveles de dificultad "}
+                icon={"gg-terminal"}
                 />
                 <CardInformation
                 title={"Investigación y desarrollo"}
                 text={"El sitio web puede servir como plataforma para la investigación y el desarrollo de la IA en el campo de los algoritmos de ajedrez"}
+                icon={"gg-sync"}
                 />
             </div>
-            <div className="carruselBoardChess">
+            <div id="play" className="carruselBoardChess">
                 <div className="information sm:max-w-lg">
                     <h1 className="text-4xl tracking-tight text-white sm:text-6xl">
-                        Conoce los beneficios de usar ChessReact
+                        ¿Que esperas para empezar a Jugar con ChessReact?
                     </h1>
                     <p className="mt-4 text-xl text-gray-500">
-                        Descubre la mejor plataforma de ajedrez en línea impulsada por inteligencia artificial. Juega partidas emocionantes y mejora tus habilidades con Chess React.
+                        Con ChessReact, explora infinitas estrategias y desafíos, mejorando tu juego de ajedrez con experiencias únicas y educativas.
                     </p>
                 </div>
                 {
@@ -100,7 +106,6 @@ export const Body = () => {
                 }
                 <CarruselChess />
             </div>
-            <ChessboardPlay />
             {/* registerServiceWorker() */}
             {/* <Tools /> */}
         </div >
