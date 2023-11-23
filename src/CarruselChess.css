@@ -1,3 +1,13 @@
+.CarruselChess{
+    display: grid;
+    justify-items: center;
+}
+
+.Button {
+    margin-block: 2.5em;
+    background-color: #095f71;
+}
+
 .tarjetas {
     position: relative;
     width: 400px;
